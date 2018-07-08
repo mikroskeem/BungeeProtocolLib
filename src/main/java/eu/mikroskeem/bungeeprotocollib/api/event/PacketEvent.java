@@ -32,13 +32,13 @@ public final class PacketEvent extends Event implements Cancellable {
      * @param packet Packet which is sent from {@code sender} to {@code receiver}
      * @param player {@link ProxiedPlayer} who is involved in this
      * @param sender {@link Connection} who sent the packet.
-     * @param reciever {@link Connection} who will receive the packet
+     * @param receiver {@link Connection} who will receive the packet
      */
-    public PacketEvent(@NotNull DefinedPacket packet, @NotNull ProxiedPlayer player, @NotNull Connection sender, @NotNull Connection reciever) {
+    public PacketEvent(@NotNull DefinedPacket packet, @NotNull ProxiedPlayer player, @NotNull Connection sender, @NotNull Connection receiver) {
         this.packet = packet;
         this.player = player;
         this.sender = sender;
-        this.reciever = reciever;
+        this.reciever = receiver;
     }
 
     /**
@@ -97,7 +97,7 @@ public final class PacketEvent extends Event implements Cancellable {
      * @return An instance of {@link Connection}
      */
     @NotNull
-    public Connection getReciever() {
+    public Connection getReceiver() {
         return reciever;
     }
 
